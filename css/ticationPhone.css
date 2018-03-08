@@ -1,0 +1,107 @@
+body{
+	background: #f2f2f2;
+}
+.bottom {
+	padding:25px 0;
+	padding-left: 4%;
+	padding-right: 4%;
+	background: #f2f2f2;
+	text-align: center;
+}
+.bottom button {
+	border-radius: 4px;
+	background: #ff93ba;
+	color: #fff;
+	font-size: 17px;
+	border:0;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+}
+.bottom button[disabled] {
+	background: #ccc;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #ccc; opacity:1; 
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #ccc;opacity:1;
+}
+input:-ms-input-placeholder{
+    color: #ccc;opacity:1;
+}
+input::-webkit-input-placeholder{
+    color: #ccc;opacity:1;
+}
+.phonebox2 {
+	margin-top: 10px;
+	background: #fff;
+	padding-left: 4%;
+	padding-right: 4%;
+}
+
+.bottom button.btn2 {
+	background: #ccc;
+}
+.pbtitle {
+	height: 90px;
+	line-height: 90px;
+	text-align: center;
+	font-size: 14px;
+	color: #333333;
+	border-bottom: 1px solid #eeeeee;
+}
+.pbinput {
+	white-space: nowrap;
+	font-size: 14px;
+	position: relative;
+	padding-bottom: 1px;
+	color: #333333;
+}
+.pbinput input {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 13px;
+	padding-left: 5px;
+	border: 0;
+}
+.pbinput button {
+	position: absolute;
+	top: 5px;
+	right: 0;
+	width: 90px;
+	height: 32px;
+	border-bottom: 4px;
+	border: 0;
+	background: #ff93ba;
+	color: #fff;
+}
+.phonebox{
+	margin-top: 10px;
+	background: #fff;
+	padding-left: 4%;
+	padding-right: 4%;
+}
+.phonebox input {
+	width: 100%;
+    box-sizing: border-box;
+    padding: 13px;
+    padding-left: 5px;
+    border: 0;
+}
+.phonebox input[disabled] {
+	background: #fff;
+	color: #999;
+}
+.phonetxt {
+	padding-left: 4%;
+	padding-right: 4%;
+	font-size: 12px;
+	color: #999999;
+}
+.phonetxt span {
+	color:#ff93ba
+}
+.phonetxt p{
+	margin-top: 5px;
+}

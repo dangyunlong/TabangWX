@@ -1,0 +1,18 @@
+/*reset*/
+body,h1,h2,h3,h4,h5,h6,div,p,dl,dt,dd,ol,ul,li,form,table,th,td,a,img,span,strong,var,em,input,textarea,select,option{margin: 0; padding: 0;}
+html,body{font-family:"微软雅黑","黑体",Arail,Tabhoma;text-align: left;height:100%}
+ul,ol{list-style: none;}
+img{border: 0 none;}
+input,select,textarea{outline:0;}
+textarea{resize:none; overflow: auto;}
+table{border-collapse: collapse; border-spacing: 0;}
+th,strong,var,em{font-weight: normal; font-style: normal;}
+a{text-decoration: none;}
+/*head*/
+.public-head {color:#fff;background:#2e2c32;text-align:center;font-family: "微软雅黑";font-size: 18px;height: 44px;line-height: 44px;position: fixed;top: 0;width: 100%;z-index: 100;}
+.headbox {height: 44px;}
+.public-head a{position: absolute; display: block;height: 42px; width: 42px; padding-top: 2px;}
+.public-head img{height: 18px;}
+.clear {clear: both; overflow: hidden;}
+.floatleft {float: left;}
+.floatright {float:right}

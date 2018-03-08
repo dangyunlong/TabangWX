@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>上传诊断书</title>
+		<link rel="stylesheet" type="text/css" href="css/head.css" />
+		<link rel="stylesheet" type="text/css" href="css/more.css" />
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<!--zepoto-->
+		<script src="js/zepto/zepto.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/zepto/event.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/zepto/touch.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body id="body">
+		<div class="public-head">上传诊断书</div>
+		<p class="headbox"></p>
+		<div id="form1">
+			<div class="upimg">
+				<div class="upimgtitle">
+					<span>请上传医院诊断书</span>
+					<span class="floatright addcolor" id="add">+ 上传更多资料</span>
+				</div>
+				<div class="upimgbox" id="upimgbox">
+					<ul>
+						<li>
+							<input type="file" id="cinput1" name="idback" class="camerabox iosinput">
+							<input type="file" capture="camera" accept="image/*" class="camerabox aninput" id="cinput1" name="idback" multiple="multiple" />
+							<img src="img/more/timg.png" width="100%" height="100%" class="uimg" id="cbox1" alt="+"/>
+						</li>
+						<li style="display:none">
+							<input type="file" capture="camera" accept="image/*" class="camerabox" id="cinput2" name="idfront"/>
+							<img src="img/more/timg.png" width="100%" height="100%" class="uimg" id="cbox2"/>
+						</li>
+						<li style="display:none">
+							<input type="file" capture="camera" accept="image/*" class="camerabox" id="cinput3" name="idfront"/>
+							<img src="img/more/timg.png" width="100%" height="100%" class="uimg" id="cbox3"/>
+						</li>
+						<li style="display:none">
+							<input type="file" capture="camera" accept="image/*" class="camerabox" id="cinput4" name="idfront"/>
+							<img src="img/more/timg.png" width="100%" height="100%" class="uimg" id="cbox4"/>
+						</li>
+						<li style="display:none">
+							<input type="file" capture="camera" accept="image/*" class="camerabox" id="cinput5" name="idfront"/>
+							<img src="img/more/timg.png" width="100%" height="100%" class="uimg" id="cbox5"/>
+						</li>
+						<li style="display:none">
+							<input type="file" capture="camera" accept="image/*" class="camerabox" id="cinput6" name="idfront"/>
+							<img src="img/more/timg.png" width="100%" height="100%" class="uimg" id="cbox6"/>
+						</li>
+						<li style="display:none">
+							<input type="file" capture="camera" accept="image/*" class="camerabox" id="cinput7" name="idfront"/>
+							<img src="img/more/timg.png" width="100%" height="100%" class="uimg" id="cbox7"/>
+						</li>
+						<li style="display:none">
+							<input type="file" capture="camera" accept="image/*" class="camerabox" id="cinput8" name="idfront"/>
+							<img src="img/more/timg.png" width="100%" height="100%" class="uimg" id="cbox8"/>
+						</li>
+						<li style="display:none">
+							<input type="file" capture="camera" accept="image/*" class="camerabox" id="cinput9" name="idfront"/>
+							<img src="img/more/timg.png" width="100%" height="100%" class="uimg" id="cbox9"/>
+						</li>
+						<li style="display:none">
+							<input type="file" capture="camera" accept="image/*" class="camerabox" id="cinput10" name="idfront"/>
+							<img src="img/more/timg.png" width="100%" height="100%" class="uimg" id="cbox10"/>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="bottom">
+				<input type="button" value="提交"/>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var u = navigator.userAgent;
+			var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+			var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+			if(isAndroid){
+				$(".iosinput").remove()
+			}else{
+				$(".aninput").remove()
+			}
+			//提交ajax
+			$("#next").on("touchstart",function(){
+				$.ajax({
+				    type:"post",
+				    url:"serv.php",
+				    data:$("#form1").serialize(),
+				    dataType:"json",
+				    success:function(data){
+				       layer.msg("上传成功！");
+				    }
+				})
+			})
+			//显示一个添加窗口
+			var num=1;
+			$("#add").on("touchstart",function(){
+				if(num==20){
+					return false;
+				}else{
+					num+=1;
+					$("#upimgbox li").eq(num).css("display","block")
+				}
+			})
+		</script>
+		<script src="js/camera.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

@@ -1,0 +1,203 @@
+/**/
+body{
+	background: #f2f2f2;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #ccc; opacity:1; 
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #ccc;opacity:1;
+}
+input:-ms-input-placeholder{
+    color: #ccc;opacity:1;
+}
+input::-webkit-input-placeholder{
+    color: #ccc;opacity:1;
+}
+.user-addbox {
+	background: #fff;
+	font-size: 14px;
+	
+}
+.user-addbox-top {
+	display: table;
+	width: 100%;
+	padding-top: 13px;
+	padding-bottom: 13px;
+	border-bottom: 1px solid #f6f6f6;
+	position: relative;
+}
+.addbox-card-name {
+	display: table-cell;
+	padding-left: 15px;
+	width: 30%;
+}
+.addbox-card-name img {
+	display: table-cell;
+	margin-right: 10px;
+}
+.addbox-card-name span{
+	display: table-cell;
+	vertical-align: middle;
+	color: #4C4C4C;
+}
+.addbox-card-title {
+	display: table-cell;
+	vertical-align: middle;
+	padding-right: 15px;
+	line-height: 10px;
+}
+.addbox-card-title span {
+	display: inline-block;
+	vertical-align: middle;
+}
+.addbox-card-title span.floatimg{
+	position: absolute;
+	right: 15px;
+	top: 18px;
+} 
+.addbox-card-number {
+	display: table-cell;
+	padding-left: 15px;
+	width: 30%;
+}
+.addbox-card-number img {
+	margin-right: 10px;
+	margin-top: 1px;
+}
+.user-addbox-bottom {
+	width: 100%;
+	display: table;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.user-addbox-bottom span{
+	display: table-cell;
+	vertical-align: middle;
+	color: #4C4C4C;
+}
+.addbox-card-user {
+	display: table-cell;
+	vertical-align: middle;
+}
+.addbox-card-user input{
+	width: 100%;
+	border: 0;
+}
+.addbox-card-user input::-webkit-input-placeholder {
+	color: #d6d6d6;
+}
+.addbox-card-btn a{
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	background: #fe5722;
+	width: 90%;
+	margin: 0 auto;
+	border-radius: 4px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 30px;
+}
+.bank-box {
+	width: 100%;
+	position: absolute;
+	bottom: -200px;
+	left: 0;
+	height:200px;
+	z-index: 999;
+	display: none;
+	overflow-y: scroll;
+	top: 170px;
+}
+.bank-box img {
+	width: 30px;
+}
+.bank-box table {
+	width: 100%;
+}
+.bank-box table tr td {
+	background: #ffffff;
+	vertical-align: middle;
+	border-bottom: 1px solid #f6f6f6;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	color: #4C4C4C;
+}
+.bank-box table tr td:nth-child(1){
+	padding-left: 15px;
+}
+.bank-box table tr td img {
+	vertical-align: middle;
+}
+.bankexp {
+	color:#ff93ba ;
+	height: 41px;
+	line-height: 41px;
+	padding-left: 4%;
+	padding-right: 4%;
+	background: #f2f2f2;
+}
+.bankbox {
+	box-sizing: border-box;
+	padding-left: 4%;
+	padding-right: 4%;
+}
+.bankhead {
+	box-sizing: border-box;
+	width: 100%;
+	background: #fff;
+	padding-left: 4%;
+	padding-right: 4%;
+	border-bottom: 1px solid #eeeeee;
+}
+.bankhead table {
+	width: 100%;
+}
+.bankhead table td{
+	font-size: 14px;
+	color: #333333;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+}
+.bankbox table {
+	width: 100%;
+}
+.bankbox table td{
+	font-size: 14px;
+	color: #333333;
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #eeeeee;
+	text-align: center;
+}
+.bankbox input {
+	width: 100%;
+	box-sizing: border-box;
+	border: 0;
+	padding:15px 10px;
+}
+.btnbox {
+    padding-left: 4%;
+    padding-right: 4%;
+    margin-top: 20px;
+}
+.btnbox a.login-btn1 {
+    display: block;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+    font-size: 17px;
+}
+.login-btn1 {
+    background: #ff93ba;
+    color: #fff;
+}
+.nodata {
+	padding-top: 50px;
+	text-align: center;
+}

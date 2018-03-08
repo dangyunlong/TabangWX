@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>实名认证</title>
+		<link rel="stylesheet" type="text/css" href="css/head.css" />
+		<link rel="stylesheet" type="text/css" href="css/state.css" />
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<!--zepoto-->
+		<script src="js/zepto/zepto.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/zepto/event.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/zepto/touch.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body id="body">
+		<div class="public-head">确认项目</div>
+		<p class="headbox"></p>
+		<div class="tichead">
+			<p><img src="img/login/true.png" alt="" width="60" height="60"/></p>
+			<p class="ticheadtxt">恭喜审核通过</p>
+		</div>
+		<div id="form1">
+			<div class="upbox">
+				<div class="upimgtitle">
+					<p>200,000.00</p>
+					<p><span>最高授信额度(元)</span></p>
+				</div>	
+				<table width="100%">
+					<tr>
+						<td width="70">借款金额：</td>
+						<td><input type="text" placeholder="请输入借款金额" name="name"/></td>
+					</tr>
+					<tr>
+						<td>居住地区：</td>
+						<td>
+							<div class="selectList">
+						        <select class="district" name="area3">
+						            <option>3期</option>
+						            <option>6期</option>
+						            <option>12期</option>
+						            <option>24期</option>
+						            <option>36期</option>
+						        </select>
+						    </div>
+						</td>
+					</tr>
+				</table>
+				<div class="upboxdown">
+					<p>实际到账金额(元)：<span class="floatright">0.00</span></p>
+					<p>每期还款金额(元)：<span class="floatright">0.00</span</p>
+				</div>
+			</div>
+			<div class="bottom">
+				<button id="next">确认项目</button>
+			</div>
+		</div>
+		<script type="text/javascript">
+			//三级联动
+		    $(function(){
+		        $(".selectList").each(function(){
+		            var url = "json.json";
+		            var areaJson;
+		            var temp_html;
+		            var oProvince = $(this).find(".province");
+		            var oCity = $(this).find(".city");
+		            var oDistrict = $(this).find(".district");
+		            //初始化省
+		            var province = function(){
+		                $.each(areaJson,function(i,province){
+		                    temp_html+="<option value='"+province.p+"'>"+province.p+"</option>";
+		                });
+		                oProvince.html(temp_html);
+		                city();
+		            };
+		            //赋值市
+		            var city = function(){
+		                temp_html = ""; 
+		                var n = oProvince.get(0).selectedIndex;
+		                $.each(areaJson[n].c,function(i,city){
+		                    temp_html+="<option value='"+city.ct+"'>"+city.ct+"</option>";
+		                });
+		                oCity.html(temp_html);
+		                district();
+		            };
+		            //赋值县
+		            var district = function(){
+		                temp_html = ""; 
+		                var m = oProvince.get(0).selectedIndex;
+		                var n = oCity.get(0).selectedIndex;
+		                if(typeof(areaJson[m].c[n].d) == "undefined"){
+		                    oDistrict.css("display","none");
+		                }else{
+		                    oDistrict.css("display","inline");
+		                    $.each(areaJson[m].c[n].d,function(i,district){
+		                        temp_html+="<option value='"+district.dt+"'>"+district.dt+"</option>";
+		                    });
+		                    oDistrict.html(temp_html);
+		                };
+		            };
+		            //选择省改变市
+		            oProvince.change(function(){
+		                city();
+		            });
+		            //选择市改变县
+		            oCity.change(function(){
+		                district();
+		            });
+		            //获取json数据
+		            $.getJSON(url,function(data){
+		                areaJson = data;
+		                province();
+		            });
+		        });
+		    });
+		</script>
+	</body>
+</html>

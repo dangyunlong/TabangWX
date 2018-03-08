@@ -1,0 +1,133 @@
+/*选项卡*/
+.project-tab-view-window {
+	display: block;
+	width: 100%;
+	overflow-x: scroll;
+}
+.project-tab-title {
+	width: 100%;
+	background: #fff;
+	overflow: hidden;
+}
+.project-tab-view-window::-webkit-scrollbar{
+	width:0;
+	height:0;
+}
+ul.project-tab-title li{
+	text-align: center;
+	position: relative;
+	color:#999;
+	white-space:nowrap;
+	font-size: 14px;
+	color: #999999;
+	height: 40px;
+	line-height: 40px;
+	float: left;
+	width: 25%;
+	text-align: center;
+}
+ul.project-tab-title li.project-tab-border a{
+	color: #999999;
+	display: block;
+	text-align: center;
+	width: 100%;
+}
+ul.project-tab-title li span {
+	background:none;
+	position: absolute;
+	bottom: -1px;
+	display: block;
+	width: 100%;
+	height: 3px;
+}
+ul.project-tab-title li span.project-tab-border{
+	background:#fe6246;
+	font-size:14px;
+	color:#999;
+}
+ul.project-tab-title li a {
+	display: block;
+	float: left;
+	color:#999;
+	position: relative;
+	width: 100%;
+}
+#pagebox {
+	overflow-x:hidden;
+	display: flex;
+	flex-flow: column;
+}
+.project-more {
+	flex: 1;
+	font-size: 0.3rem;
+	text-align: center;
+	align-items: flex-end;
+}
+/**/
+body {
+	background: #f2f2f2;
+	font-family: "微软雅黑";
+}
+/*a标签包裹*/
+.user-record-box {
+	margin-top: 8px;
+	margin-bottom: 8px;
+	overflow: hidden;
+}
+.user-record-box a {
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: block;
+	overflow: hidden;
+	margin-bottom: 10px;
+	background: #fff;
+}
+.titletxt {
+	font-size: 14px;
+	color: #4c4c4c;
+	margin-bottom: 5px;
+}
+.titletime {
+	font-size: 12px;
+	color: #999999;
+}
+/*a标签包裹 end*/
+.record-user-box {
+	font-size: 14px;
+	width: 100%;
+}
+.record-user-moneybox {
+	float: left;
+	font-size: 0.4rem;
+	width: 26%;
+}
+.record-user-title {
+	color: #4c4c4c;
+	overflow: hidden;
+	white-space:nowrap; 
+	text-overflow:ellipsis;
+}
+.line {
+	border-top: 1px solid #eeeeee;
+	margin-top: 10px;
+}
+.litable{	
+	margin-top: 10px;
+	width: 100%;
+}
+.litable td{
+	font-size: 10px;
+	text-align: center;
+	width: 33.3%;
+	height: 20px;
+}
+.litable td.litop {
+	font-size: 14px;
+}
+.more {
+	text-align: center;
+	font-size: 12px;
+	color: #ccc;
+}

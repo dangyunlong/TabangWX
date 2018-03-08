@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>我的账单</title>
+		<link rel="stylesheet" type="text/css" href="css/head.css" />
+		<link rel="stylesheet" type="text/css" href="css/bill-list.css" />
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<!--zepoto-->
+		<script src="js/zepto/zepto.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/zepto/event.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/zepto/touch.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body id="body">
+		<div class="public-head">
+			<a href="login.html"><img src="img/public/return.png" /></a>我的账单
+		</div>
+		<p class="headbox"></p>
+		<span class="project-tab-view-window">
+			<ul class="project-tab-title" id="pagetab">
+				<li class="project-tab-border">
+					<a href="#">全部<span class="project-tab-border"></span></a>
+				</li>
+				<li>
+					<a href="#">待放款<span></span></a>
+				</li>
+				<li>
+					<a href="#">待还款<span></span></a>
+				</li>
+				<li>
+					<a href="#">已结束<span></span></a>
+				</li>
+			</ul>
+		</span>
+		<div>
+			<div class="user-record-box">
+				<a href="#">
+					<div class="record-user-box">
+						<div class="record-user-title">
+							<div class="clear">
+								<div class="floatleft">
+									<p class="titletxt">申请2,000.00元</p>
+									<p class="titletime">生成时间：2017-12-12  13:14</p>
+								</div>
+								<div class="floatright">
+									<img src="img/bill/1.png" width="74" height="36"/>
+								</div>
+							</div>
+							<div class="clear line">
+								<table class="litable">
+									<tr>
+										<td class="litop">2,000.00元</td>
+										<td class="litop">1,000.00元</td>
+										<td class="litop">12期</td>
+									</tr>
+									<tr>
+										<td class="libottom">申请金额</td>
+										<td class="libottom">月还款</td>
+										<td class="libottom">分期数</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</a>
+				<a href="#">
+					<div class="record-user-box">
+						<div class="record-user-title">
+							<div class="clear">
+								<div class="floatleft">
+									<p class="titletxt">申请2,000.00元</p>
+									<p class="titletime">生成时间：2017-12-12  13:14</p>
+								</div>
+								<div class="floatright">
+									<img src="img/bill/2.png" width="74" height="36"/>
+								</div>
+							</div>
+							<div class="clear line">
+								<table class="litable">
+									<tr>
+										<td class="litop">2,000.00元</td>
+										<td class="litop">1,000.00元</td>
+										<td class="litop">12期</td>
+									</tr>
+									<tr>
+										<td class="libottom">申请金额</td>
+										<td class="libottom">月还款</td>
+										<td class="libottom">分期数</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</a>
+				<a href="#">
+					<div class="record-user-box">
+						<div class="record-user-title">
+							<div class="clear">
+								<div class="floatleft">
+									<p class="titletxt">申请2,000.00元</p>
+									<p class="titletime">生成时间：2017-12-12  13:14</p>
+								</div>
+								<div class="floatright">
+									<img src="img/bill/3.png" width="74" height="36"/>
+								</div>
+							</div>
+							<div class="clear line">
+								<table class="litable">
+									<tr>
+										<td class="litop">2,000.00元</td>
+										<td class="litop">1,000.00元</td>
+										<td class="litop">12期</td>
+									</tr>
+									<tr>
+										<td class="libottom">申请金额</td>
+										<td class="libottom">月还款</td>
+										<td class="libottom">分期数</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>	
+		<!--加载更多-->
+		<div class="more">
+			向上滑动加载更多
+		</div>
+		<!--加载更多 end-->
+		<!--zepto-->
+		<script src="js/zepto/zepto.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/zepto/event.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/zepto/touch.js" type="text/javascript" charset="utf-8"></script>
+		<!--rem-->
+		<script src="js/rem/app.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(window).scroll(function(){
+					var docHeight=$(document).height();
+					var windHeigth=$(window).height();
+					var scollPx=docHeight-windHeigth;
+					if($(window).scrollTop()==scollPx){
+						alert(123)
+					}
+				})
+			})
+		</script>
+	</body>
+</html>
