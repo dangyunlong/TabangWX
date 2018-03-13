@@ -44,7 +44,7 @@
 		</div>
 		<script type="text/javascript">
 			//美容机构
-			$("select").on("tap",function(){
+			$("select").on("change",function(){
 				$(this).find("option:contains('请选择美容机构')").remove()
 			})
 			$("select").change(function(){
@@ -52,7 +52,7 @@
 					$(this).css("color","#000000")
 				}
 			})
-			$("#login").on("touchstart",function(){
+			$("#login").on("change",function(){
 				var val=$("#jg").val();
 				if(val=="请选择美容机构"){
 					layer.alert('未选择美容机构！');
