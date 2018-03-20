@@ -20,133 +20,66 @@
 			<p>填写真实身份信息有助于您快速通过审核</p>
 			<p>拍摄时请保持身份证<span>边框完整、字迹清晰、亮度均衡</span></p>
 		</div>
-		
 		<form action="" method="post" id="form1">
 			<div class="upimg">
-				<div class="upimgtitle">
-					<img src="img/tication/icon1.png" width="15" height="15"/>
-					<span>上传身份证</span>
-				</div>
 				<div>
 					<table width="100%">
 						<tr>
-							<td align="center" style="position: relative;">
+							<td width="100" class="bdtd">
+								<p class="codet">身份证照片</p>
+								<p class="codeb">(正面)</p>
+							</td>
+							<td class="bdtd">
 								<input type="file" capture="camera" accept="image/*" class="camerabox" id="cinput1" name="idback"/>
 								<img src="img/tication/back.png" width="142" height="93" class="uimg" id="cbox1"/>
-							</td>
-							<td align="center" style="position: relative;">
-								<input type="file" capture="camera" accept="image/*" class="camerabox" id="cinput2" name="idfront"/>
-								<img src="img/tication/front.png" width="142" height="93" class="uimg" id="cbox2"/>
+								<p class="codeb2">点击开始识别身份证正面</p>
 							</td>
 						</tr>
 						<tr>
-							<td align="center" class="uimgtxt">点击开始识别身份证正面</td>
-							<td align="center" class="uimgtxt">点击开始识别身份证背面</td>
+							<td>
+								<p class="codet">身份证照片</p>
+								<p class="codeb">(背面)</p>
+							</td>
+							<td>
+								<input type="file" capture="camera" accept="image/*" class="camerabox" id="cinput2" name="idfront"/>
+								<img src="img/tication/front.png" width="142" height="93" class="uimg" id="cbox2"/>
+								<p class="codeb2">点击开始识别身份证背面</p>
+							</td>
 						</tr>
 					</table>
 				</div>
 			</div>
-			<div class="upbox">
-				<div class="upimgtitle">
-					<img src="img/tication/icon2.png" width="15" height="15"/>
-					<span>身份信息</span>
-				</div>	
-				<table width="100%">
-					<!--<tr>
-						<td width="70">真实姓名：</td>
-						<td><input type="text" placeholder="您的身份证姓名" name="name"/></td>
-					</tr>
-					<tr>
-						<td>身份证号：</td>
-						<td><input type="text" placeholder="18位身份证号码" name="id"/></td>
-					</tr>-->
-					<tr>
-						<td width="90" align="right">居住地区:</td>
-						<td>
-							<div class="selectList">
-						        <select class="province" name="area1">
-						            <option>请选择</option>
-						        </select>
-						        <select class="city" name="area2">
-						            <option>请选择</option>
-						        </select>
-						        <select class="district" name="area3">
-						            <option>请选择</option>
-						        </select>
-						    </div>
-						</td>
-					</tr>
-					<tr>
-						<td align="right">现居住地址:</td>
-						<td><input type="text" placeholder="请输入详细居住地址" name="address"/></td>
-					</tr>
-					<tr>
-						<td align="right">单位名称:</td>
-						<td><input type="text" placeholder="请输入单位名称" name="unit"/></td>
-					</tr>
-					<tr>
-						<td align="right">婚姻状态:</td>
-						<td>
-							<select class="province">
-					            <option>已婚</option>
-					            <option>未婚</option>
-					        </select>
-						</td>
-					</tr>
-					<tr>
-						<td align="right">QQ/微信:</td>
-						<td><input type="text" placeholder="请输入您的QQ号码" name="qq"/></td>
-					</tr>
-					<tr>
-						<td align="right">亲属联系人姓名:</td>
-						<td><input type="text" placeholder="请输入您的QQ号码" name="qq"/></td>
-					</tr>
-					<tr>
-						<td align="right">亲属联系人电话:</td>
-						<td><input type="text" placeholder="请输入您的QQ号码" name="qq"/></td>
-					</tr>
-					<tr>
-						<td align="right">联系人姓名:</td>
-						<td><input type="text" placeholder="请输入您的QQ号码" name="qq"/></td>
-					</tr>
-					<tr>
-						<td align="right">联系人电话:</td>
-						<td><input type="text" placeholder="请输入您的QQ号码" name="qq"/></td>
-					</tr>
-					<tr>
-						<td style="border-bottom: 0;" align="right">微信号:</td>
-						<td style="border-bottom: 0;"><input type="text" placeholder="请输入您的微信号" name="wx"/></td>
-					</tr>
-				</table>
+			<div class="tichead">
+				<p>保证脸部清洗无遮挡</p>
+				<p>保证身份证全部信息清洗无遮挡</span></p>
+			</div>
+			<div class="upimg">
+				<div>
+					<table width="100%">
+						<tr>
+							<td width="100">
+								<p class="codet">手持身份证照</p>
+							</td>
+							<td>
+								<input type="file" capture="camera" accept="image/*" class="camerabox" id="cinput3" name="idback"/>
+								<img src="img/tication/shouchi.png" width="142" height="93" class="uimg" id="cbox3"/>
+								<p class="codeb2">点击开始上传照片</p>
+							</td>
+						</tr>
+					</table>
+				</div>
 			</div>
 			<div class="bottom">
 				<input type="button" value="下一步" id="next" class="btn"/>
 			</div>
+			
 		</form>
 		<script type="text/javascript">
 			//提交ajax
 			$("#next").on("touchstart",function(){
 				var file1 = $("#cinput1").val();
 				var file2 = $("#cinput2").val();
-				/*if(file1==""){
-					layer.msg("身份证照片正面不能为空！");
-					return false;
-				}
-				if(file2==""){
-					layer.msg("身份证照片背面不能为空！");
-					return false;
-				}
-				if(file1!=""&&file2!=""){
-					$.ajax({
-					    type:"post",
-					    url:"serv.php",
-					    data:$("#form1").serialize(),
-					    dataType:"json",
-					    success:function(data){
-					       layer.msg("上传成功！");
-					    }
-					})
-				}*/
+				var file3 = $("#cinput3").val();
 				$.ajax({
 				    type:"post",
 				    url:"serv.php",
@@ -181,63 +114,18 @@
 				}
 				readerFile2.readAsDataURL(file);
 			})
-			//三级联动
-		    $(function(){
-		        $(".selectList").each(function(){
-		            var url = "json.json";
-		            var areaJson;
-		            var temp_html;
-		            var oProvince = $(this).find(".province");
-		            var oCity = $(this).find(".city");
-		            var oDistrict = $(this).find(".district");
-		            //初始化省
-		            var province = function(){
-		                $.each(areaJson,function(i,province){
-		                    temp_html+="<option value='"+province.p+"'>"+province.p+"</option>";
-		                });
-		                oProvince.html(temp_html);
-		                city();
-		            };
-		            //赋值市
-		            var city = function(){
-		                temp_html = ""; 
-		                var n = oProvince.get(0).selectedIndex;
-		                $.each(areaJson[n].c,function(i,city){
-		                    temp_html+="<option value='"+city.ct+"'>"+city.ct+"</option>";
-		                });
-		                oCity.html(temp_html);
-		                district();
-		            };
-		            //赋值县
-		            var district = function(){
-		                temp_html = ""; 
-		                var m = oProvince.get(0).selectedIndex;
-		                var n = oCity.get(0).selectedIndex;
-		                if(typeof(areaJson[m].c[n].d) == "undefined"){
-		                    oDistrict.css("display","none");
-		                }else{
-		                    oDistrict.css("display","inline");
-		                    $.each(areaJson[m].c[n].d,function(i,district){
-		                        temp_html+="<option value='"+district.dt+"'>"+district.dt+"</option>";
-		                    });
-		                    oDistrict.html(temp_html);
-		                };
-		            };
-		            //选择省改变市
-		            oProvince.change(function(){
-		                city();
-		            });
-		            //选择市改变县
-		            oCity.change(function(){
-		                district();
-		            });
-		            //获取json数据
-		            $.getJSON(url,function(data){
-		                areaJson = data;
-		                province();
-		            });
-		        });
-		    });
+			//手持身份证照
+			var $_file3 = document.getElementById("cinput2");
+			var img_box3 = document.getElementById("cbox2");
+			$_file3.addEventListener('change',function () {
+				var file = $_file3.files[0];
+				var readerFile3 = new FileReader();
+				readerFile3.onload = function (ev) {
+					var data = ev.target.result;
+					img_box3.src=data;
+				}
+				readerFile3.readAsDataURL(file);
+			})
 		</script>
 	</body>
 </html>

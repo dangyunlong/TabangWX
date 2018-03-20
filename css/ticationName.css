@@ -17,10 +17,12 @@ body{
 	padding-left: 4%;
 	padding-right: 4%;
 	background: #ffffff;
+	clear: both;
+	display: block;
+	box-sizing: border-box;
+	margin-top: 10px;
 }
 .upimg {
-	margin-bottom: 10px;
-	padding-top: 15px;
 	padding-bottom: 20px;
 }
 .upimgtitle img {
@@ -43,9 +45,6 @@ body{
 }
 .upbox {
 	padding-top: 15px;
-}
-.upbox table {
-	margin-top: 10px;
 }
 .upbox table td{
 	border-bottom:1px solid #eeeeee;
@@ -147,3 +146,14 @@ select option {
 	opacity: 0;
 }
 input[type=button], input[type=submit], input[type=file], button {cursor: pointer; -webkit-appearance: none;} 
+
+
+/*320新添加样式*/
+.codet,.codeb{text-align: center;}
+.codet {font-size: 14px; color: #333;}
+.codeb {font-size: 12px; color: #333;}
+.codeb2 {font-size: 12px; color: #999;text-align: center;} 
+.upimg table td {position: relative;}
+.uimg {margin: 0 auto; display: block; margin-top: 20px; margin-bottom: 10px;}
+.bdtd {border-bottom: 1px solid #eeeeee; padding-bottom: 16px;}
+.upbox-title {font-size: 15px; color: #333333;padding-top:10px; padding-bottom: 5px;}

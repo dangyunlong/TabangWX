@@ -1,5 +1,28 @@
 <?php
 	//echo "true"
-	header("Content-Type: application/json; charset=utf-8"); 
-    echo ('[{"age":24,"sex":"boy","name":"周志学"},{"age":26,"sex":"boy","name":"李宝辉"}]');
+header("Content-Type: application/json; charset=utf-8"); 
+
+//返回首页新闻列表
+$num=$_GET['num'];
+$pages=$_GET['pages'];
+
+
+if($num=="1"){
+    if($pages=="1"){
+		echo ('[{"title":"感恩五月妈妈重回巅峰","img":"/images/photo/new1.jpg","text":"感恩五月，位于徐家汇天钥桥路40－90号的汇联三楼在母亲节推出许多时尚的中老年服饰。裘丽服饰，闪亮的珠片修饰淡浅蓝色的二件套裙雅致而高贵；胖太太、福太太品牌的真丝时装短袖、长袖，一张一弛，面面俱到，充分展现女性魅力。即日起至5月9日汇联商厦举行“感恩母亲节”大型优惠促销赠礼活动，全场服饰商品单柜商品满180减100；凡当日购物满单张收银条满100即可获赠碧柔防晒乳液和母亲节感恩贺卡。"}]');
+		exit;
+	}else if($pages=="2"){
+		echo ('[{"title":"法国细胞护肤专家","img":"/images/photo/new2.jpg","text":"年龄的增长，肌肤胶原蛋白的流失、细纹的出现.....一系列问题的出现让我们不敢面对，甚至不敢面对这些岁月的痕迹！"}]');
+		exit;
+	}else if($pages=="3"){
+		echo ('[{"title":"新手开美容院如何进行宣传","img":"/images/photo/new3.jpg","text":"美容院宣传计划中应包括宣传的目的、宣传目标对象、宣传的区域、宣传时机、宣传媒体的选择、宣传费用预算、宣传效益测定等等"}]');
+		exit;
+	}else{
+    	echo ('[{"id":"1","img":"/images/photo/new1.jpg","title":"感恩五月妈妈重回巅峰","text":"自1997年创立企业以来，刘芳女士始终坚持做好一件事——育人，努力将每一位有缘走进芳子的姑娘培养成有用的人才。2009年，师从..."},{"id":"2","img":"/images/photo/new2.jpg","title":"法国细胞护肤专家","text":"药学博士、细胞生命学家Jean博士在1978年创建了雅诗敦首支晒黑防晒霜，奠定了这个品牌在防晒界的基石..."},{"id":"3","img":"/images/photo/new3.jpg","title":"新手开美容院如何进行宣传？","text":"美容店效劳好不好是靠美容师的，技能宣扬本来即是对美容师的宣扬，经营者可以在美容店中专门拓荒一个宣扬台..."}]'); 
+		exit;
+	}
+}
+	
+	
+    
 ?>

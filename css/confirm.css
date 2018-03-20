@@ -158,6 +158,7 @@ input::-webkit-input-placeholder{
 	box-sizing: border-box;
 	padding-left: 4%;
 	padding-right: 4%;
+	background: #fff;
 }
 .bankbox table {
 	width: 100%;
@@ -174,6 +175,7 @@ input::-webkit-input-placeholder{
 	box-sizing: border-box;
 	border: 0;
 	padding:15px 10px;
+	text-align: right;
 }
 .btnbox {
     padding-left: 4%;
@@ -194,10 +196,11 @@ input::-webkit-input-placeholder{
     color: #fff;
 }
 .bankbox table select {
-	width: 100%;
 	padding: 13px 10px;
 	box-sizing: border-box;
 	border: 0;
+	padding-right: 30px;
+	float: right;
 }
 select {
   /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
@@ -233,4 +236,7 @@ select option {
 }
 .numbottom span {
 	float: right;
+}
+.tabletop {
+	border-top:10px solid #f2f2f2;
 }
