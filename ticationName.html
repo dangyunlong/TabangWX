@@ -66,16 +66,18 @@
 		<script type="text/javascript">
 			//提交ajax
 			$("#next").on("touchstart",function(){
-				var file1 = $("#cinput1").val();
-				var file2 = $("#cinput2").val();
-				var file3 = $("#cinput3").val();
+				
+				var file1 = $("#cbox1").attr("src");
+				var file2 = $("#cbox2").attr("src");
+				var file3 = $("#cbox3").attr("src");
 				$.ajax({
 				    type:"post",
-				    url:"serv.php",
-				    data:$("#form1").serialize(),
+				    url:"http://192.168.1.173:8080/serv/upload.php",
+				    data:{"img1":file1,"img2":file2,"img3":file3},
 				    dataType:"json",
 				    success:function(data){
-				       layer.msg("上传成功！");
+				       //layer.msg(data);
+				       console.log(data)
 				    }
 				})
 			})
@@ -104,8 +106,8 @@
 				readerFile2.readAsDataURL(file);
 			})
 			//手持身份证照
-			var $_file3 = document.getElementById("cinput2");
-			var img_box3 = document.getElementById("cbox2");
+			var $_file3 = document.getElementById("cinput3");
+			var img_box3 = document.getElementById("cbox3");
 			$_file3.addEventListener('change',function () {
 				var file = $_file3.files[0];
 				var readerFile3 = new FileReader();

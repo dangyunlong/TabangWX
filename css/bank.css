@@ -54,7 +54,7 @@ input::-webkit-input-placeholder{
 .addbox-card-title span.floatimg{
 	position: absolute;
 	right: 15px;
-	top: 18px;
+	top: 15px;
 } 
 .addbox-card-number {
 	padding-left: 15px;
@@ -150,6 +150,7 @@ input::-webkit-input-placeholder{
 	height: 40px;
 	line-height: 40px;
 	border-bottom: 1px solid #eeeeee;
+	position: relative;
 }
 .bankbox input {
 	width: 100%;
